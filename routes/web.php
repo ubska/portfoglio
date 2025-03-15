@@ -14,11 +14,6 @@ Route::get('/', function () {
     ]);
 });
 
-// Questo codice definisce una rotta catch-all in Laravel, che intercetta tutte le richieste e restituisce la vista app.blade.php
-Route::get('/{any}', function () {
-    return view('app');
-})->where('any', '.*');
-
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
