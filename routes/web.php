@@ -5,30 +5,20 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+// Homepage
 Route::get('/', function () {
     return Inertia::render('Welcome');
-});
+})->name('home');
 
+// Pagina Projects
 Route::get('/projects', function () {
-    return Inertia::render('Projects', [
-        'projects' => [
-            [
-                'id' => 1,
-                'title' => 'Progetto 1',
-                'description' => 'Descrizione del progetto 1.',
-                'image' => '/images/project1.jpg',
-                'link' => '#',
-            ],
-            [
-                'id' => 2,
-                'title' => 'Progetto 2',
-                'description' => 'Descrizione del progetto 2.',
-                'image' => '/images/project2.jpg',
-                'link' => '#',
-            ],
-        ],
-    ]);
-});
+    return Inertia::render('Projects');
+})->name('projects');
+
+// Pagina Contact
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

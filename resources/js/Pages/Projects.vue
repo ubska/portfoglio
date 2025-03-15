@@ -5,7 +5,6 @@
         <h2 class="section-title">Progetti</h2>
         <div class="project-grid">
           <div v-for="project in projects" :key="project.id" class="project-card">
-            <img :src="project.image" :alt="project.title" class="project-image" />
             <h3 class="project-title">{{ project.title }}</h3>
             <p class="project-description">{{ project.description }}</p>
             <a :href="project.link" target="_blank" class="btn btn-secondary">Vedi progetto</a>
@@ -41,7 +40,6 @@ defineProps({
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 0 1rem;
 }
 
 .project-card {
@@ -54,12 +52,6 @@ defineProps({
 
 .project-card:hover {
   transform: translateY(-10px);
-}
-
-.project-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .project-title {

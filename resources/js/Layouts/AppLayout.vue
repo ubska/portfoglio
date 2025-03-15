@@ -2,10 +2,9 @@
   <div>
     <header class="header">
       <nav class="nav">
-        <Link href="/#about" class="nav-link">About</Link>
-        <Link href="/#experience" class="nav-link">Experience</Link>
-        <Link href="/#projects" class="nav-link">Projects</Link>
-        <Link href="/#contact" class="nav-link">Contact</Link>
+        <Link href="/" class="nav-link">Home</Link>
+        <Link href="/projects" class="nav-link">Projects</Link>
+        <Link href="/contact" class="nav-link">Contact</Link>
       </nav>
     </header>
     <main class="main">
@@ -51,7 +50,7 @@ import { Link } from '@inertiajs/vue3';
   padding-top: 80px; /* Spazio per la barra di navigazione fissa */
   background-color: #0a192f;
   color: #ccd6f6;
-  overflow-x: hidden; /* Evita che il contenuto fuoriesca dallo schermo */
+  overflow-x: hidden; /* Evita lo scroll orizzontale */
 }
 
 /* Stili responsive */
