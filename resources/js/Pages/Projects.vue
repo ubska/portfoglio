@@ -25,6 +25,7 @@ defineProps({
 
 <style scoped>
 .projects-section {
+  min-height: 100vh; /* Occupa l'intera altezza della viewport */
   padding: 4rem 2rem;
   background-color: #112240;
 }

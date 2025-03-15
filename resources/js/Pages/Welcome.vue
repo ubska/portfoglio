@@ -11,9 +11,22 @@
               Ho esperienza con Laravel, Vue e altre tecnologie.
             </p>
             <a href="/#projects" class="btn btn-primary">Vedi i miei progetti</a>
+
+            <!-- Aggiungi le icone e i link qui -->
+            <div class="social-links">
+              <a href="www.linkedin.com/in/oleksandra-ubska" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/ubska" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="file:///C:/users/aless/OneDrive/Desktop/cv/CV%20Oleksandra%20Ubs'ka%20().pdf" target="_blank" class="social-link">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
           </div>
           <div class="about-image">
-            <img src="/images/IMG_2594.PNG" alt="Oleksandra" class="profile-image" />
+            <img src="/images/IMG_2592.PNG" alt="Oleksandra" class="profile-image" />
           </div>
         </div>
       </div>
@@ -30,7 +43,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Occupa l'intera altezza della viewport */
   padding: 2rem;
   background-color: #0a192f;
 }
@@ -98,10 +111,30 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 }
 
 .profile-image {
-  max-width: 100%;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 4px solid #64ffda;
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  object-fit: cover;
+  border: none;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.6), 0 0 40px rgba(100, 255, 218, 0.4);
+}
+
+/* Stili per i link social */
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: #64ffda;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ccd6f6;
 }
 
 /* Stili responsive */
@@ -126,6 +159,10 @@ import AppLayout from '@/Layouts/AppLayout.vue';
   .profile-image {
     width: 200px;
     height: 200px;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
 </style>

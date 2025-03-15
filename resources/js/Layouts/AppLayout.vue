@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-layout">
     <header class="header">
       <nav class="nav">
         <Link href="/" class="nav-link">Home</Link>
@@ -18,6 +18,12 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <style scoped>
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Occupa almeno l'intera altezza della viewport */
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -26,12 +32,16 @@ import { Link } from '@inertiajs/vue3';
   background-color: #0a192f;
   padding: 1rem 2rem;
   z-index: 1000;
+  display: flex;
+  align-items: center; /* Centra verticalmente il contenuto dell'header */
+  height: 80px; /* Altezza fissa per l'header */
 }
 
 .nav {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
+  align-items: center; /* Centra verticalmente i link */
 }
 
 .nav-link {
@@ -47,6 +57,7 @@ import { Link } from '@inertiajs/vue3';
 }
 
 .main {
+  flex: 1; /* Occupa lo spazio rimanente */
   padding-top: 80px; /* Spazio per la barra di navigazione fissa */
   background-color: #0a192f;
   color: #ccd6f6;
