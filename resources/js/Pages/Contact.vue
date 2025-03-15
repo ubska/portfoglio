@@ -30,7 +30,6 @@ const form = reactive({
 });
 
 const submitForm = () => {
-  // Qui puoi gestire l'invio del modulo (ad esempio, con Axios)
   console.log('Form inviato:', form);
 };
 </script>
