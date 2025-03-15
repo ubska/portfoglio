@@ -14,6 +14,20 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/projects', function () {
+    return Inertia::render('Projects', [
+        'projects' => [
+            ['id' => 1, 'title' => 'Progetto 1'],
+            ['id' => 2, 'title' => 'Progetto 2'],
+            ['id' => 3, 'title' => 'Progetto 3'],
+        ],
+    ]);
+})->name('projects');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
