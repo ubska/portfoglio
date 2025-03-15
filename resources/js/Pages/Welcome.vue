@@ -13,7 +13,7 @@
             <a href="/#projects" class="btn btn-primary">Vedi i miei progetti</a>
           </div>
           <div class="about-image">
-            <img src="/images/41f8fead61ead12d36d4bc81b9e350.webp" alt="Oleksandra" class="profile-image" />
+            <img src="/images/IMG_2594.PNG" alt="Oleksandra" class="profile-image" />
           </div>
         </div>
       </div>
