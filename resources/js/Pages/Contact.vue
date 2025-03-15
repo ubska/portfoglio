@@ -1,21 +1,25 @@
 <template>
   <AppLayout>
-    <h1>Contattami</h1>
-    <form @submit.prevent="submitForm">
-      <div>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" v-model="form.name" required />
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Contattami</h2>
+        <form @submit.prevent="submitForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" v-model="form.name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" v-model="form.email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Messaggio:</label>
+            <textarea id="message" v-model="form.message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
       </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="form.email" required />
-      </div>
-      <div>
-        <label for="message">Messaggio:</label>
-        <textarea id="message" v-model="form.message" required></textarea>
-      </div>
-      <button type="submit">Invia</button>
-    </form>
+    </section>
   </AppLayout>
 </template>
 
@@ -35,35 +39,54 @@ const submitForm = () => {
 </script>
 
 <style scoped>
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #0a192f;
 }
 
-form div {
-  margin-bottom: 1rem;
+.section-title {
+  font-size: 2.5rem;
+  color: #ccd6f6;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
 label {
   display: block;
+  font-size: 1rem;
+  color: #ccd6f6;
   margin-bottom: 0.5rem;
 }
 
 input, textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   font-size: 1rem;
+  border: 1px solid #8892b0;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ccd6f6;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+textarea {
+  resize: vertical;
+  min-height: 150px;
 }
 
-button:hover {
-  background-color: #45a049;
+/* Stili responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 0 1rem;
+  }
 }
 </style>
